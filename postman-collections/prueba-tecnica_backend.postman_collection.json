@@ -1,0 +1,303 @@
+{
+	"info": {
+		"_postman_id": "2e4b2705-58d3-4d8c-bea1-399e19043a89",
+		"name": "prueba-tecnica_backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34406575"
+	},
+	"item": [
+		{
+			"name": "la raiz",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-tenant-id",
+						"value": "empresa123",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cliente\": \"Juan Pérez\",\r\n  \"total\":20,\r\n  \"productos\": [\r\n    {\r\n      \"productoId\": \"6864454f35ecb9d6ce09e297\",\r\n      \"cantidad\": 2\r\n    },\r\n    {\r\n        \"productoId\":\"68644db735ecb9d6ce09e29c\",\r\n        \"cantidad\":1\r\n    }\r\n  ],\r\n  \"estado\": \"en curso\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener productos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-tenant-id",
+						"value": "empresa123",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear producto",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-tenant-id",
+						"value": "empresa123",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"te\",\r\n    \"descripcion\":\"tiene te con limon\",\r\n    \"precio\":3,\r\n    \"stock\":15\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar producto",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-tenant-id",
+						"value": "empresa123",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"precio\":10,\r\n    \"stock\":7\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/productos/6864454f35ecb9d6ce09e297",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"productos",
+						"6864454f35ecb9d6ce09e297"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "borrar producto",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-tenant-id",
+						"value": "empresa123",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/productos/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"productos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener pedidos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-tenant-id",
+						"value": "empresa123",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/pedidos/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pedidos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear pedido",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-tenant-id",
+						"value": "empresa123",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cliente\": \"Pedro Alvarez\",\r\n  \"total\": 30,\r\n  \"productos\": [\r\n    {\r\n      \"productoId\": \"6864454f35ecb9d6ce09e297\",\r\n      \"cantidad\": 2\r\n    },\r\n    {\r\n      \"productoId\": \"68644db735ecb9d6ce09e29c\",\r\n      \"cantidad\": 5\r\n    }\r\n  ],\r\n  \"estado\": \"en curso\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pedidos/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pedidos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar pedido",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-tenant-id",
+						"value": "empresa123",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cliente\":\"alison aliaga\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pedido",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pedido"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar pedido",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-tenant-id",
+						"value": "empresa123",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/pedidos/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pedidos",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
