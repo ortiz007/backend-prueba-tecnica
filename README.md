@@ -35,8 +35,8 @@ src/
 
 1. Clona el repositorio:
 ```bash
-git clone https://github.com/tuusuario/tu-repo.git
-cd tu-repo
+git clone https://github.com/ortiz007/backend-prueba-tecnica.git
+cd backend-prueba-tecnica
 ```
 2. Instala las dependencias:
 ```
